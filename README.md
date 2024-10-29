@@ -24,17 +24,8 @@ mechanism to enable user authorization. Once sign in is successful, the user ses
 
 This application is deployed at [https://sil-frontend.onrender.com/][def];
 
-The data used in this app is served via a REST API deployed at [https://sil-ta-api.onrender.com/api/][def2]. The major endpoints are:
-* /users
-* /albums
-* /photos
-
-The source code for the REST API is hosted at github and can be accessed via [https://github.com/1wes/SIL-TA-API][def3]
-
 
 [def]: https://sil-frontend.onrender.com/
-[def2]: https://sil-ta-api.onrender.com/api/
-[def3]: https://github.com/1wes/SIL-TA-API
 
 
 ## How to run SIL-Frontend on a local machine.
