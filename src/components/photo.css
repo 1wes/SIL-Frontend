@@ -1,0 +1,130 @@
+.photo-component{
+    text-align: left;
+}
+
+.photo-title{
+    background-color: #8080801a;
+    padding: 5px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.title{
+    position: relative;
+    flex: 1;
+}
+
+.edit{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    gap: 5px;
+    cursor: pointer;
+    flex: 0 0 auto;
+}
+
+
+.edit i{
+    font-size: 20px;
+}
+
+form{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.submit-btns{
+    background-color: whitesmoke;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    z-index: 100;
+    margin-top: 40px;
+    display: flex;
+    gap: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    justify-content: right;
+}
+
+input{
+    width: 100%;
+    border: none;
+    background:none;
+    font-size: 20px;
+    height: 100%;
+    word-wrap: break-word;
+    color: #FFF5E4;
+}
+
+input:focus{
+    outline: none;
+}
+
+.editable-input{
+    border-bottom: 1px solid #285ac2;   
+} 
+
+.photo{
+    margin: 20px 0;
+    padding: 5px;
+    background-color: #8080801a;
+    border-radius: 5px;
+    display: flex;
+}
+
+.photo img{
+    width: 50%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+/* tablet styles */
+@media only screen and (min-width:481px) and (max-width:768px) {
+    
+    .photo img{
+        width: 100%;
+    }
+
+    .submit-btns{
+        width: 100%;
+    }
+
+  }
+  
+  @media only screen and (min-width:768px) and (max-width:1024px) {
+    .photo img{
+        width: 100%;
+    }
+
+    .submit-btns{
+        width: 100%;
+    }
+  }
+
+  @media only screen and (min-width:1024px) and (max-width:1365px) {
+  
+    .photo img{
+        width: 100%;
+    }
+
+    .submit-btns{
+        width: 100%;
+    }
+
+  }
+
+  /* mobile styles */
+  @media only screen and (max-width:768px){
+    .photo img{
+        width: 100%;
+    }
+
+    .submit-btns{
+        width: 100%;
+    }
+  }

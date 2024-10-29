@@ -1,0 +1,15 @@
+.login-component{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 100vh;
+}
+
+  /* mobile styles */
+  @media only screen and (max-width:768px){
+
+    .google-login-btn{
+        width: 100%;
+    }
+  }
