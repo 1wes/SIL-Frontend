@@ -1,0 +1,45 @@
+.user-card{
+    background-color: #8080801a;
+    border-radius: 5px;
+    text-align: left;
+    color: rgba(255, 255, 255, 0.87);
+}
+
+.name{
+    padding: 0;
+    margin: 0 0 10px 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.list{
+    padding: 0 !important;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.list li{
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+i{
+    color: #285AC2;
+}
+
+.list li span{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.centered-button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
