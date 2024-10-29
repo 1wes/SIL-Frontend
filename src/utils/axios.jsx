@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-    baseURL: "https://sil-ta-api.onrender.com",
+    baseURL: "https://jsonplaceholder.typicode.com/",
     withCredentials:true
 });
 
