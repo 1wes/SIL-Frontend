@@ -17,7 +17,7 @@ const LandingPage = () => {
                         Need Your Photos and Your Friend&apos;s In One Place?.
                     </h1>
                     <p className='tagline'>
-                        Our Application sorts that out for you. View all photos arranged per album, per user.
+                        Our Application sorts that out for you. View all photos arranged per user, per album.
                     </p>
                     
                     <Link to={`/login`}>
