@@ -1,0 +1,18 @@
+.album-component{
+    text-align: left;
+}
+
+.album-details{
+    text-align: left;
+    font-size: 20px;
+}
+
+.images-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.images-link{
+    color: rgba(255, 255, 255, 0.8);
+}
