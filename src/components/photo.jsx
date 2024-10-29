@@ -89,7 +89,7 @@ const Photo = () => {
           },
         }
       )
-      .then((res) => {
+      .then(() => {
         setOpen(true);
       })
       .catch((err) => {
