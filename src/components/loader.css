@@ -1,0 +1,13 @@
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 50vh;
+    gap: 20px;
+    height: 100%;
+}
+
+.loader-text{
+    font-size: 25px;
+}
