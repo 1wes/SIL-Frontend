@@ -27,12 +27,3 @@ jobs:
       - name: Run Unit Tests
         run: npm test
 
-      - name: Push To Production
-        if: success()
-        run: |
-          git config user.name "Github Actions"
-          git config user.email "actions@github.com"
-          git fetch origin
-          git checkout production
-          git merge development --allow-unrelated-histories
-          git push origin production
