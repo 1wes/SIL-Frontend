@@ -2,7 +2,7 @@ name: Deploy
 
 on:
   workflow_run:
-    workflows: ["Build and Test"] 
+    workflows: ["Build and Test"]
     types:
       - completed
 
@@ -20,7 +20,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '20'
+          node-version: "20"
 
       - name: Install Dependencies
         run: npm install
@@ -36,6 +36,6 @@ jobs:
           git push https://${{secrets.PERSONAL_ACCESS_TOKEN}}@github.com/1wes/SIL-Frontend.git production
 
       - name: Deploy to Production
-        env: 
+        env:
           deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
         run: curl "$deploy_url"
