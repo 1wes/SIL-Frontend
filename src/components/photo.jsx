@@ -18,6 +18,9 @@ import { Button } from "@mui/material";
 
 import Loader from "./loader";
 
+import Snackbar from "@mui/material/Snackbar";
+import Slide from "@mui/material/Slide";
+
 const fetcher = (url) => axios.get(url).then((response) => response.data);
 
 const Photo = () => {
@@ -26,6 +29,7 @@ const Photo = () => {
   const [photo, setPhoto] = useState();
   const [edit, setEdit] = useState(true);
   const [newTitle, setNewTitle] = useState();
+  const [open, setOpen] = useState(false);
 
   const photoId = useParams().id;
 
@@ -61,6 +65,10 @@ const Photo = () => {
     setEdit(true);
   };
 
+  const handleClose = () => {
+    setOpen(false);
+  }
+
   const changePhotoTitle = (e) => {
     e.preventDefault();
 
@@ -69,15 +77,24 @@ const Photo = () => {
       title: newTitle,
     });
 
+    let patchContent = {
+      title: newTitle      
+    }
+
     axios
-      .put(`https://sil-ta-api.onrender.com/api/photos/edit/${photoId}`, {
-        newTitle,
-      })
+      .patch(
+        `https://jsonplaceholder.typicode.com/photos/${photoId}`, patchContent,
+        {
+          headers: {
+            "Content-Type": "application/json", 
+          },
+        }
+      )
       .then((res) => {
-        console.log(res);
+        setOpen(true);
       })
       .catch((err) => {
-        console.log(err);
+        console.log(err); 
       });
 
     setEdit(true);
@@ -85,6 +102,8 @@ const Photo = () => {
 
   return (
     <Fragment>
+      <Snackbar open={open} autoHideDuration={3000} message={`Photo title changed successfully`} anchorOrigin={{ vertical: "top", horizontal: "right" }}
+       onClose={handleClose} />
       <main className="photo-component">
         <PageHeader header={`Photo`} />
         {photo ? (
@@ -143,9 +162,9 @@ const Photo = () => {
               <img src={photo && photo.url} alt="retrievedPhoto" />
             </div>
           </>
-        ):(
-            <Loader info={`photo details`} />
-          )}
+        ) : (
+          <Loader info={`photo details`} />
+        )}
       </main>
     </Fragment>
   );
