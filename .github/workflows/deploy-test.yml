@@ -1,4 +1,4 @@
-name: Deploy to Render
+name: Build and Tests
 
 on:
   workflow_run:
@@ -20,3 +20,18 @@ jobs:
 
       - name: Install Dependencies
         run: npm install
+
+      - name: Push To Production
+        if: success()
+        run: |
+          git config user.name "Github Actions"
+          git config user.email "actions@github.com"
+          git fetch origin
+          git checkout production
+          git merge development --allow-unrelated-histories
+          git push https://${{secrets.PERSONAL_ACCESS_TOKEN}}@github.com/1wes/SIL-Frontend.git production
+
+      - name: Deploy to Production
+        env:
+          deploy_url: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+        run: curl "$deploy_url"
