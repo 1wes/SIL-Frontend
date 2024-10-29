@@ -13,7 +13,7 @@ const Loader = ({ info }) => {
                     <ClipLoader color='white' size={80} />                    
                 </div>
                 <div className='loader-text'>
-                    fetching {info}
+                    fetching {info}...
                 </div>
             </main>
         </Fragment>
