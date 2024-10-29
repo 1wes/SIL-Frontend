@@ -30,7 +30,7 @@ const Photo = () => {
   const photoId = useParams().id;
 
   const { data: photoDetails } = useSWR(
-    `https://sil-ta-api.onrender.com/api/photos/${photoId}`,
+    `https://jsonplaceholder.typicode.com/photos/${photoId}`,
     fetcher
   );
 

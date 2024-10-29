@@ -20,7 +20,7 @@ const Users = () => {
     useAuthRedirection();
 
     // fetch all users
-    const { isLoading, data: allUsers } = useSWR(`https://sil-ta-api.onrender.com/api/users`, fetcher);    
+    const { isLoading, data: allUsers } = useSWR(`https://jsonplaceholder.typicode.com/users`, fetcher);    
     
     return (
         <Fragment>
@@ -43,7 +43,7 @@ const Users = () => {
 const UserAlbumDetails = ({ user }) => {
     
     // fetch a specific user's albums
-    const { data: albums } = useSWR(`https://sil-ta-api.onrender.com/api/users/${user.id}/albums`, fetcher);
+    const { data: albums } = useSWR(`https://jsonplaceholder.typicode.com/users/${user.id}/albums`, fetcher);
 
     return (
         <li key={user?.id}>

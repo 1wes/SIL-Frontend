@@ -29,7 +29,7 @@ const User = () => {
 
     const userId = useParams();
 
-    const { isLoading, data: userDetails } = useSWR(`https://sil-ta-api.onrender.com/api/users/${userId.id}`, fetcher);
+    const { isLoading, data: userDetails } = useSWR(`https://jsonplaceholder.typicode.com/users/${userId.id}`, fetcher);
     
     useEffect(() => {
         
@@ -75,7 +75,7 @@ const User = () => {
 
 const UserAlbums = ({userId}) => {
     
-    const { isLoading, data: albums } = useSWR(`https://sil-ta-api.onrender.com/api/users/${userId.id}/albums`, fetcher);
+    const { isLoading, data: albums } = useSWR(`https://jsonplaceholder.typicode.com/users/${userId.id}/albums`, fetcher);
 
     const albumsList = albums?.map((album) => {        
         

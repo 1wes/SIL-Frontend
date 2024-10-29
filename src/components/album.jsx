@@ -23,11 +23,11 @@ const Album = () => {
   const albumId = useParams().albumId;
 
   const { isLoading, data: album } = useSWR(
-    `https://sil-ta-api.onrender.com/api/albums/${albumId}`,
+    `https://jsonplaceholder.typicode.com/albums/${albumId}`,
     fetcher
   );
   const { data: photos } = useSWR(
-    `https://sil-ta-api.onrender.com/api/photos/album/${albumId}`,
+    `https://jsonplaceholder.typicode.com/photos/?albumId=${albumId}`,
     fetcher
   );
 
