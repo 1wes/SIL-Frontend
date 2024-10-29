@@ -1,0 +1,83 @@
+.main-landing-page{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hero-punchline, .hero-image{
+    width: 48%;
+}
+
+.punchline{
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.tagline{
+    font-weight: 450;
+    font-size: 16px;
+}
+
+.hero-image img{
+    height: auto;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: rgba(250, 245, 245, 0.2) 0px 7px 29px 0px;
+}
+
+#log-in-btn{
+    width: 40%;
+    margin: 20px 0 0 0;
+}
+
+/* tablet styles */
+@media only screen and (min-width:481px) and (max-width:768px) {
+    
+    .main-landing-page{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .hero-punchline, .hero-image{
+        width: 100%;
+    }
+
+  }
+  
+  @media only screen and (min-width:768px) and (max-width:1024px) {
+  
+    #log-in-btn{
+        width: 80%;
+    }
+
+  }
+
+  @media only screen and (min-width:1024px) and (max-width:1365px) {
+  
+    #log-in-btn{
+        width: 80%;
+    }
+
+  }
+
+  /* mobile styles */
+  @media only screen and (max-width:768px){
+
+    .main-landing-page{
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .hero-punchline, .hero-image{
+        width: 100%;
+    }
+
+    #log-in-btn{
+        width: 100%;
+    }
+
+  }
