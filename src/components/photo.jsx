@@ -19,7 +19,6 @@ import { Button } from "@mui/material";
 import Loader from "./loader";
 
 import Snackbar from "@mui/material/Snackbar";
-import Slide from "@mui/material/Slide";
 
 const fetcher = (url) => axios.get(url).then((response) => response.data);
 
