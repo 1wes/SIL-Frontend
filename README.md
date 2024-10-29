@@ -28,7 +28,7 @@ This application is deployed at [https://sil-frontend.onrender.com/][def];
 [def]: https://sil-frontend.onrender.com/
 
 
-## How to run SIL-Frontend on a local machine.
+## How to set up SIL-Frontend locally.
 
 In your chosen terminal, run the follwing command
 
